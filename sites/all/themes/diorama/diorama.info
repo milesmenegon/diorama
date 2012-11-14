@@ -1,0 +1,14 @@
+name = Diorama
+description = Drupal theme for the Diorama website.
+version = 0.1
+core = 6.x
+engine = phptemplate
+stylesheets[all][] = style.css
+stylesheets[print][] = print.css
+regions[header] = Header
+regions[left] = Left sidebar
+regions[right] = Right sidebar
+regions[content_top] = Above content, below footer
+regions[content] = Content
+regions[content_bottom] = Below content, above footer
+regions[footer] = Footer
