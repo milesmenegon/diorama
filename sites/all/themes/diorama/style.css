@@ -16,11 +16,12 @@ del { text-decoration: line-through; }
 table { border-collapse: collapse; border-spacing: 0; }
 
 /* Global styles */
-html { background:#eee; }
+html { background:#eee url('/sites/all/themes/diorama/images/bg.jpg') repeat-x left top; }
 body{
 	font:81.25% "Helvetica Neue",Helvetica,Arial,sans-serif;
 	margin:0px auto;
 	width:978px;
+
 }
 a {text-decoration:none;}
 h1 { font-size:28px; margin-bottom:24px; clear:both;}
@@ -61,15 +62,19 @@ margin-right:-21px;
 }
 #search-box  label { display:none; }
 #search-box input { font-size:14px; }
-#search-box #edit-submit { 
-	background: #9c9c31;  /* #5E0525; */
-	color:white;
+#search-box #edit-submit:hover { 
+	background: #eee;  /* #5E0525; */
+	color:black;
 	border:none;
-	padding:4px;
-	-moz-border-radius:3px;
-	-webkit-border-radius:3px;
 	cursor:pointer;
+	border:1px solid black;
 }
+#search-box #edit-submit {
+	background:black;
+	color:white;
+	border:1px solid white;
+	padding:3px 10px 3px 13px;
+} 
 #primary{ 
 	margin-left:18px;  
 	margin-top:18px;
@@ -80,27 +85,27 @@ margin-right:-21px;
 #primary a { 
 	font-size:14px; 
 	padding:8px 16px; 
-	color:#9c9c31;
+	color:#fefefe;
 	font-weight:bold;
 	letter-spacing:1px;
 	background:transparent  /*#5E0525*/;
 }
 #primary a:hover, #primary li.active-trail a  {
-	background:#9c9c31; color:white;
+	background:#fefefe; color:black;
 }
 
 /*Homepage styles*/
 body.front #page-title {display:none;}
 #node-1 { 
-	margin:-6px 24px 24px;  
+	margin:0;  
 	padding:14px 20px;
 	background:white;
 	color:#5E0525;
-	position:relative;
+	position:absolute;
+	left:-5000em;
 	z-index:2;
 	-webkit-box-shadow:0px 0px 12px #ccc;
 	-moz-box-shadow:0px 0px 12px #ccc;
-	position: relative;
 	z-index: 3;
 }
 body.front iframe { margin-top:24px; }
@@ -124,13 +129,12 @@ body.front iframe { margin-top:24px; }
 }
 
 #block-views-diorama_projects-block_1 { 
-	margin-left:23px; 
-	margin-bottom:24px;
-	border-bottom:1px dotted #ccc;
+	margin-top:-40px;
+	margin-left:23px;
 	padding-bottom:12px;
 	width:932px;
 }
-#block-views-diorama_projects-block_1  h2 {  
+#block-views-diorama_projects-block_1 h2 {  
 	border-bottom:2px solid #9C9C31;
 	padding-left:8px;
 	padding-bottom:6px;
@@ -139,11 +143,10 @@ body.front iframe { margin-top:24px; }
 }
 #block-views-diorama_projects-block_1 .views-row {
 	float:left;
-	background:url(/sites/all/themes/diorama/images/project-bg.jpg) no-repeat left top;
+	/*background:url(/sites/all/themes/diorama/images/project-bg.jpg) no-repeat left top;*/
 	margin-right:12px;
-	width:200px;
-	padding:12px 12px;
-	height:396px;
+	width:210px;
+	padding:12px 12px 12px 0;
 	position:relative;
 	z-index:3;
 }
@@ -171,10 +174,10 @@ body.front iframe { margin-top:24px; }
 	margin-bottom:24px;
 	position:relative;
 	z-index:2;
+	background:transparent;
+	border-right:1px dotted #999;
 }
-
 #block-views-diorama_news-block_1 .views-row {
-	background:white;
 	padding:12px 12px 0;
 	margin-top:24px;
 	opacity:0.9;
@@ -182,16 +185,17 @@ body.front iframe { margin-top:24px; }
 #block-views-diorama_news-block_1 a.see-all {
 	padding: 12px;
 	display: block;
-	background: white;
 	margin-top: 24px;
-	text-align: center;
+	text-align: right;
+	font-weight:bold;
 	font-size: 14px;
 	color: #222;
 	font-weight: normal;
+	color:blue;
+	background:transparent;
 }
 #block-views-diorama_news-block_1 a.see-all:hover {
-	background:#9C9C31;
-	color:white;
+	text-decoration: underline; 
 }
 body.front .views-field-view-node {
 	padding:8px 0 12px;
@@ -199,8 +203,19 @@ body.front .views-field-view-node {
 }
 body.front .views-field-view-node a { color:#333; font-weight:bold; }
 body.front .views-field-view-node a:hover { text-decoration:underline; }
-body.front .views-field-title { font-size:16px; padding-bottom:12px; font-weight:bold; color:#666;}
-body.front .views-field-title a {color:#333;}
+body.front .view-diorama-projects .views-field-title { 
+	font-size:16px; 
+	font-weight:bold; 
+	color:#000; 
+	background:rgba(255,255,255,0.5);
+	text-transform: uppercase;
+	padding:12px;;
+	position:relative;
+	top:140px;
+}
+body.front .views-field-title a {color:#000;}
+#block-block-2 {background:white; position:absolute; left:0; width:100%; padding-left: 33%; box-shadow:0px 0px 12px red;}
+#block-views-diorama_news-block_1 h2 {padding:7px 0 7px 14px; background:#ddd; border-top-left-radius: 25px;}
 
 /* Other page styles */
 #watermark { 				   
@@ -245,18 +260,17 @@ body.not-front #container {
 	margin-bottom:24px;
 	width: 854px;
 	margin-left: 24px;
+	box-shadow:0px 5px 10px #ddd;
 }
-body.not-front #header { border-bottom:1px solid #eee; }
 #breadcrumb .breadcrumb{ float:left; margin-right:6px; }
 #breadcrumb { font-family:verdana, sans-serif; font-size:12px; }
 
 #footer {
 	clear:both; 
 	padding:24px; 
-	border-top:1px solid #ccc;
 	text-align:center;
-	width: 886px;
-	margin-left: 24px;
+	background:transparent;
+	width:100%;
 }
 #footer h2 { display:none; }
 #block-menu-secondary-links { display:inline; text-align:center; }
