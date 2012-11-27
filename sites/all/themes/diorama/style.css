@@ -33,28 +33,35 @@ p { margin:12px 0; }
 /*Header*/
 #header { height:118px; }
 #sitename { 
-background:url("/sites/all/themes/diorama/images/logo_w400.png") repeat-x 0 0 transparent;
+background:url("/sites/all/themes/diorama/images/logo.png") repeat-x 0 0 transparent;
 	float:left;
 	height:65px;
 	margin:10px 0 0px;
-	width:400px;
+	width:286px;
 	position:relative;
 	left:10px;
 	z-index:100;
 }
 #sitename h1 a { color:transparent; display:block; width:292px; height:44px;}
-#block-menu-menu-sn-links{ position:absolute; margin:24px 0 0 819px; }
+#block-menu-menu-sn-links{ position:absolute; margin:0 0 0 616px; }
 #block-menu-menu-sn-links h2 { display:none; }
-#block-menu-menu-sn-links li { display:inline;  padding:0 0px 10px 0;}
+#block-menu-menu-sn-links li { display:inline;  padding:0 0px 38px 24px;}
 #block-menu-menu-sn-links li a { color:transparent; padding-bottom:0px; }
-#block-menu-menu-sn-links li.Facebook { background:url("/sites/all/themes/diorama/images/fb.png") no-repeat 0 0; margin-right:-38px;
+#block-menu-menu-sn-links li.Facebook { background:url("/sites/all/themes/diorama/images/facebook-logo.png") no-repeat 0 0;
+margin-right:-38px;
 }
-#block-menu-menu-sn-links li.LinkedIn { background:url("/sites/all/themes/diorama/images/linkedin.png") no-repeat 0 0;  margin-right:-29px;
+#block-menu-menu-sn-links li.LinkedIn { background:url("/sites/all/themes/diorama/images/linkedin-logo.png") no-repeat 0 0;
+margin-left:-26px;
 }
-#block-menu-menu-sn-links li.Twitter { background:url("/sites/all/themes/diorama/images/twitter.png") no-repeat 0 0; 
-margin-right:-21px;
+#block-menu-menu-sn-links li.Twitter { background:url("/sites/all/themes/diorama/images/twitter.png") no-repeat 0 0;
+ margin-right:-21px;}
+#block-menu-menu-sn-links li.YouTube { background:url("/sites/all/themes/diorama/images/you-tube1.png") no-repeat 0 0;
+margin-left:-12px;
 }
-#block-menu-menu-sn-links li.YouTube { background:url("/sites/all/themes/diorama/images/youtube.png") no-repeat 0 0;
+#block-menu-menu-sn-links li.Flickr { background:url("/sites/all/themes/diorama/images/flickr.png") no-repeat 0 0;
+}
+#block-menu-menu-sn-links li.Vimeo { background:url("/sites/all/themes/diorama/images/vimeo.png") no-repeat 0 0;
+margin-left:-6px;
 }
 #search-box { 
 	float:right; 
@@ -130,7 +137,7 @@ body.front iframe { margin-top:24px; }
 
 #block-views-diorama_projects-block_1 { 
 	margin-top:-40px;
-	margin-left:23px;
+	margin-left:24px;
 	padding-bottom:12px;
 	width:932px;
 }
@@ -145,8 +152,8 @@ body.front iframe { margin-top:24px; }
 	float:left;
 	/*background:url(/sites/all/themes/diorama/images/project-bg.jpg) no-repeat left top;*/
 	margin-right:12px;
-	width:210px;
-	padding:12px 12px 12px 0;
+	width:224px;
+	padding:0px 0px 12px 0;
 	position:relative;
 	z-index:3;
 }
@@ -166,23 +173,24 @@ body.front iframe { margin-top:24px; }
 	}
 }
 
-#block-views-diorama_news-block_1 { 
+#block-views-diorama_news-block_1, #block-views-diorama_media_releases-block_1 { 
 	margin:0 12px 0 24px; 
 	float:left; 
-	width:460px;
+	width:450px;
 	background: transparent;
 	margin-bottom:24px;
 	position:relative;
 	z-index:2;
 	background:transparent;
-	border-right:1px dotted #999;
 }
-#block-views-diorama_news-block_1 .views-row {
+#block-views-diorama_news-block_1 .views-row, #block-views-diorama_media_releases-block_1 .views-row {
 	padding:12px 12px 0;
 	margin-top:24px;
 	opacity:0.9;
 }
-#block-views-diorama_news-block_1 a.see-all {
+#block-views-diorama_news-block_1 .views-field-title span a, #block-views-diorama_media_releases-block_1 .views-field-title span a {font-weight:bold; font-size:16px; display:block; padding-bottom:12px;}
+#block-views-diorama_news-block_1 .views-field-changed, #block-views-diorama_media_releases-block_1 .views-field-changed {font-style:italic; color:#222; letter-spacing:1px; margin-bottom:2px;}
+#block-views-diorama_news-block_1 a.see-all, #block-views-diorama_media_releases-block_1 a.see-all {
 	padding: 12px;
 	display: block;
 	margin-top: 24px;
@@ -194,7 +202,7 @@ body.front iframe { margin-top:24px; }
 	color:blue;
 	background:transparent;
 }
-#block-views-diorama_news-block_1 a.see-all:hover {
+#block-views-diorama_news-block_1 a.see-all:hover, #block-views-diorama_media_releases-block_1 a.see-all:hover {
 	text-decoration: underline; 
 }
 body.front .views-field-view-node {
@@ -215,7 +223,7 @@ body.front .view-diorama-projects .views-field-title {
 }
 body.front .views-field-title a {color:#000;}
 #block-block-2 {background:white; position:absolute; left:0; width:100%; padding-left: 33%; box-shadow:0px 0px 12px red;}
-#block-views-diorama_news-block_1 h2 {padding:7px 0 7px 14px; background:#ddd; border-top-left-radius: 25px;}
+#block-views-diorama_news-block_1 h2, #block-views-diorama_media_releases-block_1 h2 {text-align:right; padding:7px 14px 7px 0px; background:#ddd; border-top-left-radius: 25px;}
 
 /* Other page styles */
 #watermark { 				   
